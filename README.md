@@ -31,7 +31,7 @@ Commercial support for this library is available upon request from
 Source Code
 -----------
 
-http://github.com/digitalbazaar/jsonld-request
+http://github.com/digitalbazaar/jsonld-rdfa
 
 [Digital Bazaar]: https://digitalbazaar.com/
 [JSON-LD]: https://json-ld.org/
