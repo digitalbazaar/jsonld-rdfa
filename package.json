@@ -1,0 +1,81 @@
+{
+  "name": "jsonld-rdfa",
+  "version": "0.1.0-dev",
+  "description": "A jsonld.js plugin to hande RDFa.",
+  "homepage": "https://github.com/digitalbazaar/jsonld-rdfa",
+  "author": {
+    "name": "Digital Bazaar, Inc.",
+    "email": "support@digitalbazaar.com",
+    "url": "https://digitalbazaar.com/"
+  },
+  "contributors": [
+    "Dave Longley <dlongley@digitalbazaar.com>",
+    "David I. Lehn <dlehn@digitalbazaar.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalbazaar/jsonld-rdfa"
+  },
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/jsonld-rdfa/issues",
+    "email": "support@digitalbazaar.com"
+  },
+  "license": "BSD-3-Clause",
+  "main": "lib/index.js",
+  "files": [
+    "dist/*.js",
+    "dist/*.js.map",
+    "dist/node6/**/*.js",
+    "lib/*.js",
+    "lib/**/*.js"
+  ],
+  "dependencies": {
+    "semver": "^6.3.0",
+    "xmldom": "0.1.19"
+  },
+  "peerDependencies": {
+    "jsonld": "^1.8.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.5",
+    "@babel/plugin-transform-runtime": "^7.7.5",
+    "@babel/preset-env": "^7.7.5",
+    "@babel/register": "^7.7.4",
+    "@babel/runtime": "^7.7.5",
+    "babel-loader": "^8.0.5",
+    "core-js": "^3.4.7",
+    "eslint": "^6.7.2",
+    "eslint-config-digitalbazaar": "^2.0.1",
+    "regenerator-runtime": "^0.13.3",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3",
+    "webpack-merge": "^4.2.1"
+  },
+  "engines": {
+    "node": ">=6"
+  },
+  "keywords": [
+    "JSON",
+    "JSON-LD",
+    "Linked Data",
+    "RDF",
+    "RDFa",
+    "Semantic Web",
+    "jsonld"
+  ],
+  "scripts": {
+    "prepublish": "npm run build",
+    "build": "npm run build-webpack && npm run build-node6",
+    "build-webpack": "webpack",
+    "build-node6": "BROWSERSLIST='node 6' babel --no-babelrc lib --out-dir dist/node6/lib --presets=@babel/preset-env",
+    "lint": "eslint *.js lib/**.js"
+  },
+  "browser": {
+    "lib/index.js": "./lib/jsonld-rdfa.js",
+    "jsonld": false,
+    "xmldom": false
+  }
+}

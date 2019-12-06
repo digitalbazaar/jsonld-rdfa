@@ -1,0 +1,12 @@
+*.sublime-project
+*.sublime-workspace
+*.sw[op]
+*~
+.DS_Store
+.cproject
+.project
+.settings
+coverage
+dist
+node_modules
+v8.log
