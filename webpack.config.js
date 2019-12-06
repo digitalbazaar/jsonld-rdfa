@@ -46,20 +46,18 @@ outputs.forEach(info => {
                   {
                     useBuiltIns: 'usage',
                     corejs: 3,
-                    debug: true
+                    //debug: true,
                   }
                 ]
               ],
-              /*
               plugins: [
                 [
                   '@babel/plugin-proposal-object-rest-spread',
                   {useBuiltIns: true}
                 ],
-                //'@babel/plugin-transform-modules-commonjs',
-                //'@babel/plugin-transform-runtime'
+                '@babel/plugin-transform-modules-commonjs',
+                '@babel/plugin-transform-runtime'
               ]
-              */
             }
           }
         }
